@@ -19,7 +19,7 @@ st.set_page_config(
 # -------------------------------
 @st.cache_resource
 def load_model():
-    model_path = Path(__file__).resolve().parent / "efficientnetb0.keras"
+    model_path = Path(__file__).resolve().parent / "major project" / "efficientnetb0.keras"
     return tf.keras.models.load_model(model_path)
 
 model = load_model()
@@ -74,6 +74,7 @@ if uploaded_file is not None:
     img_array = np.array(img).astype(np.float32)
 
     img_array = np.expand_dims(img_array, axis=0)
+    
 
     # -------------------------------
     # Prediction
